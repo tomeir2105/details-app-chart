@@ -14,6 +14,13 @@ meir25/details-app:latest
 
 ---
 
+## Optional deploy with music
+
+```bash
+sudo chmod +x ./deploy-with-music.sh
+./deploy-with-music.sh
+```
+
 ## Deploy
 
 ```bash
