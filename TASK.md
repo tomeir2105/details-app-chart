@@ -4,7 +4,7 @@ Create a deployment that will have the `details_app` application running inside 
 
 ---
 
-## Used the correct container for the task
+## Use the correct container for the task
 
 Steps:
 - I chose `nginx:alpine` for the task.
