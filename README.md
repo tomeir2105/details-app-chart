@@ -21,7 +21,7 @@ sudo chmod +x ./deploy-with-music.sh
 ./deploy-with-music.sh
 ```
 
-## Deploy
+## Only Deploy (no music)
 
 ```bash
 kubectl apply -f details-app.yaml
