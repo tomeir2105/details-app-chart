@@ -10,6 +10,6 @@ SOUND_PID=$!
 
 kubectl apply -f details-app.yaml
 
-echo "Sound PID is $SOUND_PID"
+echo "Sound PID is $SOUND_PID or killall aplay"
 
 echo "Deployment complete."
