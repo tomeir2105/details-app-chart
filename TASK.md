@@ -8,16 +8,16 @@ Create a deployment that will have the `details_app` application running inside 
 
 Steps:
 - I chose `nginx:alpine` for the task.
-- Created `details-app` by adding HTML code to the `src/` folder.
-- Created a `Dockerfile` to verify the app runs correctly.
-- Built and pushed the image to Docker Hub using `preparations.sh`.
+- Added HTML code to create 'details-app' in `src/` folder.
+- Created a `Dockerfile` to create the image.
+- Build and push the image to Docker Hub using `preparations.sh`.
 
 ---
 
 ## Pods receive IP addresses and ports and are accessible
 
 Steps:
-- Created a `Deployment` YAML pulling `details-app` from Docker Hub.
+- Created a `Deployment` YAML that is pulling `details-app` from Docker Hub.
 - Added a `Service` of type `NodePort` to expose it to the local machine via port `30081`.
 - Learned that `nodePort` must be >30000 by default. You can change this range, but it requires restarting K3s with a custom flag.
 
