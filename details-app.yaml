@@ -1,3 +1,11 @@
+#############################################
+# details-app v1.0
+# Created by Meir on 26/07
+# Deployment: 2 replicas of Nginx website 
+# Dockerhub: meir25/details-app:latest
+# Service: http://<node-ip>:30081
+#############################################
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
