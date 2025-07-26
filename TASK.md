@@ -19,8 +19,6 @@ Steps:
 Steps:
 - Created a `Deployment` YAML that is pulling `details-app` from Docker Hub.
 - Added a `Service` of type `NodePort` to expose it to the local machine via port `30081`.
-- Learned that `nodePort` must be >30000 by default. You can change this range, but it requires restarting K3s with a custom flag.
-
 ---
 
 ## Deployment has a ReplicaSet of 2 pods
