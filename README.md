@@ -19,7 +19,7 @@ This Helm chart deploys the **details-app** application on a Kubernetes (K3s) cl
 ```bash
 helm install my-details-app ./details-app-chart
 ```
-# Uninstall the chart
+### Uninstall the chart
 ```bash
 helm uninstall my-details-app
 ```
