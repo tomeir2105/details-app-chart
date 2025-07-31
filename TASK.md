@@ -29,4 +29,3 @@ service:
 helm install my-details-app ./details-app-chart
 kubectl get pods
 ```
-### Added user customization options
