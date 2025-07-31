@@ -3,8 +3,7 @@
 The task is to create a helm chart for my details-app in k3s.
 
 ## Steps I Took to Create a Helm Chart for details-app on K3s
-- Review the original Kubernetes files - details-app contains 2 pods and expose it on a NodePort.
-
+### Reviewed the original Kubernetes files - details-app contains 2 pods and expose it on a NodePort.
 ### Created the Helm chart structure
 ```bash
 helm create details-app-chart
