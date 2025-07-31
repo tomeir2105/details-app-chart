@@ -16,7 +16,6 @@ This Helm chart deploys the **details-app** application on a Kubernetes (K3s) cl
 ### Clone the repository
 ```bash
 git clone https://github.com/tomeir2105/details-app-chart.git
-cd details-app-chart
 ```
 
 ### Install the chart
