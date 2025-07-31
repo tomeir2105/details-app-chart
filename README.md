@@ -1,52 +1,24 @@
-# details-app using K3s
+# details-app Helm Chart
 
-details-app is a simple static website served by Nginx and deployed to a Kubernetes (K3s) cluster using a Deployment and a NodePort Service.
-
-Upon deployment, the cluster pulls the Docker image from Docker Hub (user: meir25) and starts two pods of the same app in the same cluster using a replica set.
+This Helm chart deploys the **details-app** application on a Kubernetes (K3s) cluster.
 
 ---
 
-## Docker Image
+## What It Does
 
-```
-meir25/details-app:latest
-```
+- Deploys a Deployment with 2 replicas of the **details-app** container
+- Creates a NodePort Service exposing the app on port 30081
+- Pulls the Docker image `meir25/details-app:latest` from Docker Hub
 
 ---
 
-## Optional deploy with music
+## Usage
+
+### Install the chart
 
 ```bash
-sudo chmod +x ./deploy-with-music.sh
-./deploy-with-music.sh
-```
+helm install my-details-app ./details-app-chart
 
-## Only Deploy (no music)
-
+# Uninstall the chart
 ```bash
-kubectl apply -f details-app.yaml
-```
-
----
-
-## Access the App
-
-Once deployed, you can access the website using your node’s IP and the configured NodePort:
-
-```
-http://<NODE-IP>:30081
-```
-
-To find your node’s IP:
-
-```bash
-kubectl get nodes -o wide
-```
-
----
-
-## What's Included
-
-- Deployment with 2 replicas
-- Service of type NodePort on port 30081
-
+helm uninstall my-details-app
