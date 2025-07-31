@@ -1,0 +1,25 @@
+# Ignore OS and editor files
+.DS_Store
+*.swp
+*.tmp
+*.bak
+*.backup
+
+# Ignore Helm local files
+charts/
+*.tgz
+
+# Ignore Kubernetes local config files
+.kube/
+*.local
+
+# Ignore logs
+*.log
+
+# Ignore node_modules or similar if you have any frontend code (optional)
+node_modules/
+
+# Ignore .idea or .vscode if using JetBrains or VSCode (optional)
+.idea/
+.vscode/
+
