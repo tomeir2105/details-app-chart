@@ -1,43 +1,33 @@
-# Kubernetes Deployment Task – details-app
+# Task
 
-Create a deployment that will have the `details_app` application running inside your K8s cluster. Verify that you have:
+The task is to create a helm chart for my details-app in k3s.
 
----
+## Steps I Took to Create a Helm Chart for details-app on K3s
+- Review the original Kubernetes files - details-app contains 2 pods and expose it on a NodePort.
 
-## Use the correct container for the task
-
-Steps:
-- I chose `nginx:alpine` for the task.
-- Added HTML code to create 'details-app' in `src/` folder.
-- Created a `Dockerfile` to create the image.
-- Build and push the image to Docker Hub using `preparations.sh`.
-
----
-
-## Pods receive IP addresses and ports and are accessible
-
-Steps:
-- Created a `Deployment` YAML that is pulling `details-app` from Docker Hub.
-- Added a `Service` of type `NodePort` to expose it to the local machine via port `30081`.
----
-
-## Deployment has a ReplicaSet of 2 pods
-
-- Defined `replicas: 2` in the Deployment spec.
-
----
-
-## Deployment is running and accessible
-
-- Verified access using:
-  curl http://127.0.0.1:30081
-
----
-
-## Test ReplicaSet behavior
-
-- Try deleting one pod:
-  kubectl delete pod <pod-name>
-
-- Confirm that Kubernetes automatically restarts it to maintain the replica count.
-
+### Created the Helm chart structure
+```bash
+helm create details-app-chart
+```
+### cleaned up unnecessary files.
+### Converted YAML files into templates
+### Replaced fixed values like image and ports with variables in templates/,
+```bash 
+image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+```
+### Set default values in values.yaml:
+```bash
+replicaCount: 2
+image:
+  repository: meir25/details-app
+  tag: latest
+service:
+  nodePort: 30081
+```
+### Tested the Helm chart on K3s
+### Installed and verified pods:
+```bash
+helm install my-details-app ./details-app-chart
+kubectl get pods
+```
+### Added user customization options
