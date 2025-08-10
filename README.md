@@ -6,7 +6,7 @@ This Helm chart deploys the **details-app** application on a Kubernetes (K3s) cl
 
 ## What It Does
 
-- Deploys Helm chart with 2 replicas of the **details-app** container
+- Deploys 2 replicas of the **details-app** container
 - Creates a NodePort Service exposing the app on port 30081
 - Pulls the Docker image `meir25/details-app:latest` from Docker Hub
 
